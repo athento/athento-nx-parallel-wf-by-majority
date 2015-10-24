@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.athento-nx-parallel-wf-by-majority.schema"
+	version="1.0">
+	<require>org.nuxeo.runtime.started</require>
+
+	<extension target="org.nuxeo.ecm.core.schema.TypeService"
+		point="schema">
+
+		<schema name="var_Task2169" prefix="var_Task2169" override="true"
+			src="data/schemas/var_Task2169.xsd" />
+		<schema name="var_Task21a0" prefix="var_Task21a0" override="true"
+			src="data/schemas/var_Task21a0.xsd" />
+		<schema name="var_Task2225" prefix="var_Task2225" override="true"
+			src="data/schemas/var_Task2225.xsd" />
+		<schema name="var_Task22b4" prefix="var_Task22b4" override="true"
+			src="data/schemas/var_Task22b4.xsd" />
+		<schema name="var_Task232e" prefix="var_Task232e" override="true"
+			src="data/schemas/var_Task232e.xsd" />
+		<schema name="var_Task2556" prefix="var_Task2556" override="true"
+			src="data/schemas/var_Task2556.xsd" />
+		<schema name="var_Task328d" prefix="var_Task328d" override="true"
+			src="data/schemas/var_Task328d.xsd" />
+		<schema name="var_ParallelDocumentReviewByMajority" prefix="var_ParallelDocumentReviewByMajority"
+			override="true" src="data/schemas/var_ParallelDocumentReviewByMajority.xsd" />
+
+	</extension>
+
+</component>	

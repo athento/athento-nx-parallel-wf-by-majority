@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component
+	name="org.athento.athento-nx-parallel-wf-by-majority.doctype"
+	version="1.0">
+	<require>org.nuxeo.runtime.started</require>
+
+	<extension target="org.nuxeo.ecm.core.schema.TypeService"
+		point="doctype">
+
+		<facet name="facet-var_Task2169">
+			<schema name="var_Task2169" />
+		</facet>
+
+		<facet name="facet-var_Task21a0">
+			<schema name="var_Task21a0" />
+		</facet>
+
+		<facet name="facet-var_Task2225">
+			<schema name="var_Task2225" />
+		</facet>
+
+		<facet name="facet-var_Task22b4">
+			<schema name="var_Task22b4" />
+		</facet>
+
+		<facet name="facet-var_Task232e">
+			<schema name="var_Task232e" />
+		</facet>
+
+		<facet name="facet-var_Task2556">
+			<schema name="var_Task2556" />
+		</facet>
+
+		<facet name="facet-var_Task328d">
+			<schema name="var_Task328d" />
+		</facet>
+
+		<facet name="facet-var_ParallelDocumentReviewByMajority">
+			<schema name="var_ParallelDocumentReviewByMajority" />
+		</facet>
+
+	</extension>
+
+</component>	
