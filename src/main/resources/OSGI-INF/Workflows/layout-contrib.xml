@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component
+	name="org.athento.athento-nx-parallel-wf-by-majority.layouts"
+	version="1.0">
+	<require>org.nuxeo.runtime.started</require>
+
+	<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+		point="layouts">
+
+		<layout name="Task2169@taskLayout">
+			<templates>
+				<template mode="any">/layouts/athento-nx-parallel-wf-by-majority_layout_template.xhtml
+				</template>
+			</templates>
+			<rows>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>review_result</widget>
+				</row>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>comment</widget>
+				</row>
+			</rows>
+			<widget name="review_result" type="htmltext">
+				<labels>
+					<label mode="any">wf.parallelDocumentReview.consolidate.form.review_brief
+					</label>
+				</labels>
+				<translated>true</translated>
+				<fields>
+					<field>['review_result']</field>
+				</fields>
+				<widgetModes>
+					<mode value="edit">view</mode>
+				</widgetModes>
+			</widget>
+			<widget name="comment" type="textarea">
+				<labels>
+					<label mode="any">wf.parallelDocumentReview.comment</label>
+				</labels>
+				<translated>true</translated>
+				<fields>
+					<field>['comment']</field>
+				</fields>
+			</widget>
+		</layout>
+
+		<layout name="Task2556@taskLayout">
+			<templates>
+				<template mode="any">/layouts/athento-nx-parallel-wf-by-majority_layout_template.xhtml
+				</template>
+			</templates>
+			<rows>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>participants</widget>
+				</row>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>comment</widget>
+				</row>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>end_date</widget>
+				</row>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>majority_approval</widget>
+				</row>
+			</rows>
+			<widget name="participants" type="multipleUsersSuggestion">
+				<labels>
+					<label mode="any">wf.parallelDocumentReviewByMajority.ParticipantsOnTheReview
+					</label>
+				</labels>
+				<translated>true</translated>
+				<fields>
+					<field>['participants']</field>
+				</fields>
+				<properties widgetMode="edit">
+					<property name="orderable">true</property>
+					<property name="placeholder">label.security.search</property>
+					<property name="width">300</property>
+					<property name="prefixed">true</property>
+					<property name="required">#{request.getParameter('button') ==
+						'start_review'}
+					</property>
+				</properties>
+			</widget>
+			<widget name="comment" type="textarea">
+				<labels>
+					<label mode="any">wf.parallelDocumentReviewByMajority.comment
+					</label>
+				</labels>
+				<translated>true</translated>
+				<fields>
+					<field>['comment']</field>
+				</fields>
+			</widget>
+			<widget name="end_date" type="datetime">
+				<labels>
+					<label mode="any">wf.parallelDocumentReviewByMajority.endDate
+					</label>
+				</labels>
+				<helpLabels>
+					<label mode="any">wf.parallelDocumentReviewByMajority.endDate.help
+					</label>
+				</helpLabels>
+				<translated>true</translated>
+				<fields>
+					<field>['end_date']</field>
+				</fields>
+				<properties widgetMode="edit">
+					<property name="required">#{request.getParameter('button') ==
+						'start_review'}
+					</property>
+				</properties>
+			</widget>
+			<widget name="majority_approval" type="int">
+				<labels>
+					<label mode="any">wf.parallelDocumentReviewByMajority.Majority_approval
+					</label>
+				</labels>
+				<translated>true</translated>
+				<fields>
+					<field>['majority_approval']</field>
+				</fields>
+				<properties widgetMode="edit">
+					<property name="placeholder">
+						wf.parallelDocumentReviewByMajority.Majorityapproval.placeholder
+					</property>
+				</properties>
+			</widget>
+		</layout>
+
+		<layout name="Task328d@taskLayout">
+			<templates>
+				<template mode="any">/layouts/athento-nx-parallel-wf-by-majority_layout_template.xhtml
+				</template>
+			</templates>
+			<rows>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>initiatorComment</widget>
+				</row>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget>comment</widget>
+				</row>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget />
+				</row>
+				<row>
+					<properties mode="any">
+						<property name="nxl_colspan_0">1</property>
+					</properties>
+					<widget />
+				</row>
+			</rows>
+			<widget name="initiatorComment" type="textarea">
+				<labels>
+					<label mode="any">wf.parallelDocumentReviewByMajority.initiatorComment
+					</label>
+				</labels>
+				<translated>true</translated>
+				<fields>
+					<field>['initiatorComment']</field>
+				</fields>
+				<widgetModes>
+					<mode value="edit">view</mode>
+				</widgetModes>
+			</widget>
+			<widget name="comment" type="textarea">
+				<labels>
+					<label mode="any">wf.parallelDocumentReview.reviewerComment</label>
+				</labels>
+				<translated>true</translated>
+				<fields>
+					<field>['comment']</field>
+				</fields>
+			</widget>
+		</layout>
+
+	</extension>
+
+</component>
